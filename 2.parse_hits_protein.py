@@ -8,12 +8,7 @@ from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
 
 
-####1. Working with all_euk_pfamout.txt file, splitting by ; and putting in different lines
-
-
 df_domain = pd.read_csv("parse_file.txt", header=None)
-
-
 
 df_domain = pd.DataFrame(df_domain[0].str.split('\t').tolist(),
                       columns=['id', 'values', 'scores'])
