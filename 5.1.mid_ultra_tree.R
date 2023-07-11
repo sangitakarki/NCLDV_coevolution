@@ -5,7 +5,7 @@ library(phytools)
 
 files <- list.files(pattern = "\\.nwk$" )
 # set the output directory
-output_dir <- "/projects/Aylward_Lab/sangita/third_project/Pfam_all_files_2/clade_depth"
+output_dir <- "/clade_depth"
 
 # loop over the list of file names and read each nwk file
 for (file in files) {
