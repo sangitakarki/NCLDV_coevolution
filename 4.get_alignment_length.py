@@ -6,7 +6,7 @@ from Bio import AlignIO
 from Bio.Align import MultipleSeqAlignment
 import os
 
-folder_name = "/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/all_new_files/alignments/new_alignment"
+folder_name = "/new_alignmenst"
 file_paths = []
 
 for file_name in os.listdir(folder_name):
