@@ -11,6 +11,6 @@ This repository contains codes used for NCLDV-eukaryote co-evolution study.
 
 4.get_alignment_length. py : get alignment length
 
-5.1, 5.2, 5.3:  Calculating depth of the tree
+5, 5.1, 5.2, 5.3:  Calculating depth of the tree
 
-6. 
+6.color_code.py : for color options on iTOl
