@@ -2,11 +2,8 @@ from Bio import SeqIO
 from tqdm.notebook import tqdm
 import os
 
-####conda activate Py37 ######
-#euk_taxa = "/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/euk_taxa.txt"
-folder_allcomplete = "/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/all_complete_faa"
-folder_protein = "/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/gene_tree_review"
-#itol_colorstrip_header = "/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/topoiso5_colorstrip.txt"
+folder_allcomplete = "/all_complete_faa"
+folder_protein = "/gene_tree_proteins"
 
 file_paths = []
 for file_name in os.listdir(folder_allcomplete):
@@ -14,11 +11,11 @@ for file_name in os.listdir(folder_allcomplete):
 #print(file_paths)
 
 file_to_group = {
-    '/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/all_complete_faa/all_asgard_proteins_updated.faa': "Asgard archaea",
-    "/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/all_complete_faa/all_complete_NCLDV_proteins.faa" :"Giant Virus",
-    '/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/all_complete_faa/all_complete_reduced_euk.faa' : "Eukaryote",
-    '/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/all_complete_faa/cured_merged_arc_familyreps.faa': "Archaea",
-    '/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/itol_color_script_files/all_complete_faa/merged_bac_familyreps.faa' : "Bacteria"
+    '/all_asgard_proteins_updated.faa': "Asgard archaea",
+    "/all_complete_NCLDV_proteins.faa" :"Giant Virus",
+    '/all_complete_reduced_euk.faa' : "Eukaryote",
+    '/cured_merged_arc_familyreps.faa': "Archaea",
+    '/merged_bac_familyreps.faa' : "Bacteria"
 }
 #
 #
