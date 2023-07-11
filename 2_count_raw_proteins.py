@@ -3,12 +3,7 @@ import pandas as pd
 from tqdm.notebook import tqdm
 import pickle
 
-#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/eukaryote/final_reduced_euk_proteins_parsed.txt", "r")
-#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/bac_arc/bacarc_merged_1034_proteins_all.parsed", "r")
-#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/ncldv/all_complete_NCLDV_proteins.parsed", "r")
 f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/asgard/all_asgard_proteins_updated.parsed", "r")
-#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/bac_arc/new_1034_bac_arc_seperate/cured_merged_arc_familyreps.parsed", "r")
-#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/bac_arc/new_1034_bac_arc_seperate/bac/merged_bac_familyreps.parsed", "r")
 
 head = True
 data = []
