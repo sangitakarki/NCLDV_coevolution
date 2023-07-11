@@ -8,7 +8,7 @@ def get_parent(tree, child_clade):
     return node_path[-2]
 
 #tree = Phylo.read('rooted_tree.nwk', 'newick')
-tree = Phylo.read('/projects/Aylward_Lab/sangita/third_project/Pfam_all_files/pfam_domain_trees/all_new_files/cytoskeleton_trees/cytoskeleton/GED_trim.aln.treefile', 'newick')
+tree = Phylo.read('GED_trim.aln.treefile', 'newick')
 #clades = [i for i in tree.find_clades()]
 clades = tree.get_nonterminals()
 
