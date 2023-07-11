@@ -17,8 +17,8 @@ def run_hmmer(input_file, cpus):
 	cmd = "hmmsearch --cut_nc --cpu " + str(CPUS) + " --domtblout " + output_file + " " + hmmdb + " " + input_file
 	print(cmd)
 	cmd2 = shlex.split(cmd)
-	subprocess.call(cmd2, stdout=open("out.txt", "w"), stderr=open("err.txt", "w"))
-	os.remove("out.txt")
+	#subprocess.call(cmd2, stdout=open("out.txt", "w"), stderr=open("err.txt", "w"))
+	#os.remove("out.txt")
 	return output_file
 
 
