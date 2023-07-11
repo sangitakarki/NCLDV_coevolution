@@ -3,7 +3,7 @@ import pandas as pd
 from tqdm.notebook import tqdm
 import pickle
 
-f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/asgard/all_asgard_proteins_updated.parsed", "r")
+f = open("parsed_protein_from_first_code.txt", "r")
 
 head = True
 data = []
