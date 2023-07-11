@@ -3,10 +3,8 @@ import sys
 
 dicts = {}
 lista = []
-#filename = "/projects/Aylward_Lab/sangita/third_project/Pfam_all_files_2/clade_depth/clade_depth_output/IF4E.txt"
-#filename = "/projects/Aylward_Lab/sangita/third_project/Pfam_all_files_2/IF4E_tree_depth.txt"
-filename = "/projects/Aylward_Lab/sangita/third_project/Pfam_all_files_2/ercc4.5depth.txt"
 
+filename = "protein_depth.txt"
 
 for line  in open(filename):
     if line.startswith("Root"):
