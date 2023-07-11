@@ -1,0 +1,40 @@
+import numpy as np
+import pandas as pd
+from tqdm.notebook import tqdm
+import pickle
+
+#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/eukaryote/final_reduced_euk_proteins_parsed.txt", "r")
+#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/bac_arc/bacarc_merged_1034_proteins_all.parsed", "r")
+#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/ncldv/all_complete_NCLDV_proteins.parsed", "r")
+f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/asgard/all_asgard_proteins_updated.parsed", "r")
+#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/bac_arc/new_1034_bac_arc_seperate/cured_merged_arc_familyreps.parsed", "r")
+#f = open("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/bac_arc/new_1034_bac_arc_seperate/bac/merged_bac_familyreps.parsed", "r")
+
+head = True
+data = []
+count = 0
+
+for line in tqdm(f):
+
+    if head == True:
+        header = line.strip().split("\t")
+        # print (header)
+        head = False
+        continue
+    line_list = line.strip().split("\t")
+    protein = line_list[0]
+    # print (protein)
+    hits = line_list[1]
+    hit_list = hits.split(";")
+    # print (hit_list)
+    for i in range(len(hit_list)):
+        data.append([protein, hit_list[i]])
+# print(data)
+df = pd.DataFrame(data, columns=["proteins", "hits"])
+df.head()
+hits = df["hits"].to_list()
+sf = pd.Series(hits).value_counts()
+
+df = pd.DataFrame({'Protein':sf.index, 'count':sf.values}) #changing series to df. as we cannot output series on its own
+
+#df.to_csv("/groups/Aylward_Lab/sangita/third_project/Pfam_all_files/pfamdomain_proteins_count/asgardonlypfamdom_protein_count_updated.txt", sep=' ', index=False, header=False)
