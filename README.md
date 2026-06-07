@@ -1,5 +1,5 @@
 # NCLDV_coevolution
-This repository contains codes used for NCLDV-eukaryote co-evolution study.
+This repository contains Python and R scripts used for NCLDV-eukaryote co-evolution study.
 
 0.hmmsearch_wrapper.py :  code for hmmsearch against pfam database
 
